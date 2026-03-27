@@ -57,7 +57,7 @@ module struct_example;
     bit       parity;       // 奇偶校验位
   } data_word_t;
   
-  data_word_t reg_file[8];  // 寄存器文件: 8个结构体元素
+  data_word_s reg_file[8];  // 寄存器文件: 8个结构体元素
   
   // ========== 5. 匿名结构体 ==========
   // 直接声明结构体变量，不使用typedef

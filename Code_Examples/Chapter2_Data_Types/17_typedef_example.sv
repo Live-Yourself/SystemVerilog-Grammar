@@ -149,7 +149,10 @@ module typedef_example;
     $display("  ✓ 类型复用: 可在多处使用同一类型定义");
     $display("  ✓ 易于修改: 修改类型只需改一处定义");
     $display("  ✓ 类型安全: 编译器进行类型检查");
-    $display("  ✓ 团队协作: 统一命名规范 (如 _t 后缀)");
+    $display("  ✓ 团队协作: 统一命名规范");
+    $display("    - 结构体: _s 后缀 (如 packet_s)");
+    $display("    - 联合体: _u 后缀 (如 data_view_u)");
+    $display("    - 枚举:   _t 后缀 (如 state_t)");
     
     $display("\n========================================");
     $display("         示例运行完成");

@@ -47,18 +47,18 @@ module union_example;
     logic       sop;      // 包头
     logic [7:0] data;     // 数据
     logic       eop;      // 包尾
-  } simple_pkt_t;         // 简单数据包 (10位)
+  } simple_pkt_s;         // 简单数据包 (10位)，结构体加 _s
   
   typedef union packed {
-    simple_pkt_t packet;  // 数据包视图
+    simple_pkt_s packet;  // 数据包视图
     logic [9:0]  raw;     // 原始位视图
     struct packed {
       logic [1:0] ctrl;   // 控制位
       logic [7:0] payload;// 有效载荷
     } fields;             // 字段视图
-  } bus_data_t;
+  } bus_data_u;           // 联合体命名默认加 _u
   
-  bus_data_t bus_line;    // 总线数据
+  bus_data_u bus_line;    // 总线数据
 
   // ========== 5. 寄存器多视图访问 ==========
   // 同一寄存器的不同位域访问
